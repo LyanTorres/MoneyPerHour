@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29EB14FB2056ECC50045A33A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FA2056ECC50045A33A /* AppDelegate.swift */; };
+		29EB14FD2056ECC50045A33A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FC2056ECC50045A33A /* ViewController.swift */; };
+		29EB15002056ECC50045A33A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EB14FE2056ECC50045A33A /* Main.storyboard */; };
+		29EB15022056ECC50045A33A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EB15012056ECC50045A33A /* Assets.xcassets */; };
+		29EB15052056ECC50045A33A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EB15032056ECC50045A33A /* LaunchScreen.storyboard */; };
+		29EB150A2056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 29EB15092056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App.app */; };
+		29EB15102056ECC50045A33A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EB150E2056ECC50045A33A /* Interface.storyboard */; };
+		29EB15122056ECC50045A33A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EB15112056ECC50045A33A /* Assets.xcassets */; };
+		29EB15192056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29EB15182056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		29EB151E2056ECC50045A33A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB151D2056ECC50045A33A /* InterfaceController.swift */; };
+		29EB15202056ECC50045A33A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB151F2056ECC50045A33A /* ExtensionDelegate.swift */; };
+		29EB15222056ECC50045A33A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB15212056ECC50045A33A /* NotificationController.swift */; };
+		29EB15242056ECC50045A33A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EB15232056ECC50045A33A /* Assets.xcassets */; };
+		29EB15572056EF550045A33A /* MPH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29EB15552056EF550045A33A /* MPH.xcdatamodeld */; };
+		29EB1559205818FF0045A33A /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB1558205818FF0045A33A /* GettingStartedViewController.swift */; };
+		29EB155B205822880045A33A /* InfoFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB155A205822880045A33A /* InfoFormViewController.swift */; };
+		29EB155D205825BB0045A33A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB155C205825BB0045A33A /* User.swift */; };
+		29EB155F20583DFA0045A33A /* UserKeysForUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB155E20583DFA0045A33A /* UserKeysForUserDefault.swift */; };
+		29EB15612058742D0045A33A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB15602058742D0045A33A /* MainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29EB150B2056ECC50045A33A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29EB14EF2056ECC50045A33A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29EB15082056ECC50045A33A;
+			remoteInfo = "TorresLyan_MoneyPerHour WatchKit App";
+		};
+		29EB151A2056ECC50045A33A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29EB14EF2056ECC50045A33A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29EB15172056ECC50045A33A;
+			remoteInfo = "TorresLyan_MoneyPerHour WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		29EB152C2056ECC50045A33A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				29EB15192056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EB15302056ECC50045A33A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				29EB150A2056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		29EB14F72056ECC50045A33A /* TorresLyan_MoneyPerHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorresLyan_MoneyPerHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EB14FA2056ECC50045A33A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29EB14FC2056ECC50045A33A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29EB14FF2056ECC50045A33A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29EB15012056ECC50045A33A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29EB15042056ECC50045A33A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29EB15062056ECC50045A33A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29EB15092056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TorresLyan_MoneyPerHour WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EB150F2056ECC50045A33A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		29EB15112056ECC50045A33A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29EB15132056ECC50045A33A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29EB15182056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TorresLyan_MoneyPerHour WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29EB151D2056ECC50045A33A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		29EB151F2056ECC50045A33A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		29EB15212056ECC50045A33A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		29EB15232056ECC50045A33A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29EB15252056ECC50045A33A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29EB15262056ECC50045A33A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		29EB15562056EF550045A33A /* testin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testin.xcdatamodel; sourceTree = "<group>"; };
+		29EB1558205818FF0045A33A /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
+		29EB155A205822880045A33A /* InfoFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoFormViewController.swift; sourceTree = "<group>"; };
+		29EB155C205825BB0045A33A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		29EB155E20583DFA0045A33A /* UserKeysForUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeysForUserDefault.swift; sourceTree = "<group>"; };
+		29EB15602058742D0045A33A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29EB14F42056ECC50045A33A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EB15152056ECC50045A33A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29EB14EE2056ECC50045A33A = {
+			isa = PBXGroup;
+			children = (
+				29EB14F92056ECC50045A33A /* TorresLyan_MoneyPerHour */,
+				29EB150D2056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App */,
+				29EB151C2056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension */,
+				29EB14F82056ECC50045A33A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29EB14F82056ECC50045A33A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29EB14F72056ECC50045A33A /* TorresLyan_MoneyPerHour.app */,
+				29EB15092056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App.app */,
+				29EB15182056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29EB14F92056ECC50045A33A /* TorresLyan_MoneyPerHour */ = {
+			isa = PBXGroup;
+			children = (
+				29EB14FA2056ECC50045A33A /* AppDelegate.swift */,
+				29EB15662058807D0045A33A /* Storyboards */,
+				29EB15652058806B0045A33A /* Classes */,
+				29EB1563205880340045A33A /* ViewControllers */,
+				29EB1567205880930045A33A /* Extras */,
+				29EB15062056ECC50045A33A /* Info.plist */,
+			);
+			path = TorresLyan_MoneyPerHour;
+			sourceTree = "<group>";
+		};
+		29EB150D2056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				29EB150E2056ECC50045A33A /* Interface.storyboard */,
+				29EB15112056ECC50045A33A /* Assets.xcassets */,
+				29EB15132056ECC50045A33A /* Info.plist */,
+			);
+			path = "TorresLyan_MoneyPerHour WatchKit App";
+			sourceTree = "<group>";
+		};
+		29EB151C2056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				29EB151D2056ECC50045A33A /* InterfaceController.swift */,
+				29EB151F2056ECC50045A33A /* ExtensionDelegate.swift */,
+				29EB15212056ECC50045A33A /* NotificationController.swift */,
+				29EB15232056ECC50045A33A /* Assets.xcassets */,
+				29EB15252056ECC50045A33A /* Info.plist */,
+				29EB15262056ECC50045A33A /* PushNotificationPayload.apns */,
+			);
+			path = "TorresLyan_MoneyPerHour WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		29EB1563205880340045A33A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				29EB1564205880530045A33A /* startUpVCs */,
+				29EB15602058742D0045A33A /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		29EB1564205880530045A33A /* startUpVCs */ = {
+			isa = PBXGroup;
+			children = (
+				29EB14FC2056ECC50045A33A /* ViewController.swift */,
+				29EB1558205818FF0045A33A /* GettingStartedViewController.swift */,
+				29EB155A205822880045A33A /* InfoFormViewController.swift */,
+			);
+			path = startUpVCs;
+			sourceTree = "<group>";
+		};
+		29EB15652058806B0045A33A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				29EB155C205825BB0045A33A /* User.swift */,
+				29EB155E20583DFA0045A33A /* UserKeysForUserDefault.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		29EB15662058807D0045A33A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				29EB14FE2056ECC50045A33A /* Main.storyboard */,
+				29EB15032056ECC50045A33A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		29EB1567205880930045A33A /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				29EB15012056ECC50045A33A /* Assets.xcassets */,
+				29EB15552056EF550045A33A /* MPH.xcdatamodeld */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29EB14F62056ECC50045A33A /* TorresLyan_MoneyPerHour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29EB15312056ECC50045A33A /* Build configuration list for PBXNativeTarget "TorresLyan_MoneyPerHour" */;
+			buildPhases = (
+				29EB14F32056ECC50045A33A /* Sources */,
+				29EB14F42056ECC50045A33A /* Frameworks */,
+				29EB14F52056ECC50045A33A /* Resources */,
+				29EB15302056ECC50045A33A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29EB150C2056ECC50045A33A /* PBXTargetDependency */,
+			);
+			name = TorresLyan_MoneyPerHour;
+			productName = TorresLyan_MoneyPerHour;
+			productReference = 29EB14F72056ECC50045A33A /* TorresLyan_MoneyPerHour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29EB15082056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29EB152D2056ECC50045A33A /* Build configuration list for PBXNativeTarget "TorresLyan_MoneyPerHour WatchKit App" */;
+			buildPhases = (
+				29EB15072056ECC50045A33A /* Resources */,
+				29EB152C2056ECC50045A33A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29EB151B2056ECC50045A33A /* PBXTargetDependency */,
+			);
+			name = "TorresLyan_MoneyPerHour WatchKit App";
+			productName = "TorresLyan_MoneyPerHour WatchKit App";
+			productReference = 29EB15092056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		29EB15172056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29EB15292056ECC50045A33A /* Build configuration list for PBXNativeTarget "TorresLyan_MoneyPerHour WatchKit Extension" */;
+			buildPhases = (
+				29EB15142056ECC50045A33A /* Sources */,
+				29EB15152056ECC50045A33A /* Frameworks */,
+				29EB15162056ECC50045A33A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TorresLyan_MoneyPerHour WatchKit Extension";
+			productName = "TorresLyan_MoneyPerHour WatchKit Extension";
+			productReference = 29EB15182056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29EB14EF2056ECC50045A33A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Lyan Torres";
+				TargetAttributes = {
+					29EB14F62056ECC50045A33A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					29EB15082056ECC50045A33A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					29EB15172056ECC50045A33A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 29EB14F22056ECC50045A33A /* Build configuration list for PBXProject "TorresLyan_MoneyPerHour" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29EB14EE2056ECC50045A33A;
+			productRefGroup = 29EB14F82056ECC50045A33A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29EB14F62056ECC50045A33A /* TorresLyan_MoneyPerHour */,
+				29EB15082056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App */,
+				29EB15172056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29EB14F52056ECC50045A33A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EB15052056ECC50045A33A /* LaunchScreen.storyboard in Resources */,
+				29EB15022056ECC50045A33A /* Assets.xcassets in Resources */,
+				29EB15002056ECC50045A33A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EB15072056ECC50045A33A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EB15122056ECC50045A33A /* Assets.xcassets in Resources */,
+				29EB15102056ECC50045A33A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EB15162056ECC50045A33A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EB15242056ECC50045A33A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29EB14F32056ECC50045A33A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EB155F20583DFA0045A33A /* UserKeysForUserDefault.swift in Sources */,
+				29EB155B205822880045A33A /* InfoFormViewController.swift in Sources */,
+				29EB14FD2056ECC50045A33A /* ViewController.swift in Sources */,
+				29EB155D205825BB0045A33A /* User.swift in Sources */,
+				29EB1559205818FF0045A33A /* GettingStartedViewController.swift in Sources */,
+				29EB14FB2056ECC50045A33A /* AppDelegate.swift in Sources */,
+				29EB15572056EF550045A33A /* MPH.xcdatamodeld in Sources */,
+				29EB15612058742D0045A33A /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29EB15142056ECC50045A33A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EB15222056ECC50045A33A /* NotificationController.swift in Sources */,
+				29EB15202056ECC50045A33A /* ExtensionDelegate.swift in Sources */,
+				29EB151E2056ECC50045A33A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29EB150C2056ECC50045A33A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29EB15082056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit App */;
+			targetProxy = 29EB150B2056ECC50045A33A /* PBXContainerItemProxy */;
+		};
+		29EB151B2056ECC50045A33A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29EB15172056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension */;
+			targetProxy = 29EB151A2056ECC50045A33A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29EB14FE2056ECC50045A33A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29EB14FF2056ECC50045A33A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29EB15032056ECC50045A33A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29EB15042056ECC50045A33A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		29EB150E2056ECC50045A33A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29EB150F2056ECC50045A33A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29EB15272056ECC50045A33A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29EB15282056ECC50045A33A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29EB152A2056ECC50045A33A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5H9CKH9EH;
+				INFOPLIST_FILE = "TorresLyan_MoneyPerHour WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lyan-Torres.TorresLyan-MoneyPerHour.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		29EB152B2056ECC50045A33A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5H9CKH9EH;
+				INFOPLIST_FILE = "TorresLyan_MoneyPerHour WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lyan-Torres.TorresLyan-MoneyPerHour.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		29EB152E2056ECC50045A33A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5H9CKH9EH;
+				IBSC_MODULE = TorresLyan_MoneyPerHour_WatchKit_Extension;
+				INFOPLIST_FILE = "TorresLyan_MoneyPerHour WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lyan-Torres.TorresLyan-MoneyPerHour.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		29EB152F2056ECC50045A33A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5H9CKH9EH;
+				IBSC_MODULE = TorresLyan_MoneyPerHour_WatchKit_Extension;
+				INFOPLIST_FILE = "TorresLyan_MoneyPerHour WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lyan-Torres.TorresLyan-MoneyPerHour.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		29EB15322056ECC50045A33A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TorresLyan_MoneyPerHour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lyan-Torres.TorresLyan-MoneyPerHour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29EB15332056ECC50045A33A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TorresLyan_MoneyPerHour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Lyan-Torres.TorresLyan-MoneyPerHour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29EB14F22056ECC50045A33A /* Build configuration list for PBXProject "TorresLyan_MoneyPerHour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EB15272056ECC50045A33A /* Debug */,
+				29EB15282056ECC50045A33A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29EB15292056ECC50045A33A /* Build configuration list for PBXNativeTarget "TorresLyan_MoneyPerHour WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EB152A2056ECC50045A33A /* Debug */,
+				29EB152B2056ECC50045A33A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29EB152D2056ECC50045A33A /* Build configuration list for PBXNativeTarget "TorresLyan_MoneyPerHour WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EB152E2056ECC50045A33A /* Debug */,
+				29EB152F2056ECC50045A33A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29EB15312056ECC50045A33A /* Build configuration list for PBXNativeTarget "TorresLyan_MoneyPerHour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29EB15322056ECC50045A33A /* Debug */,
+				29EB15332056ECC50045A33A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		29EB15552056EF550045A33A /* MPH.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				29EB15562056EF550045A33A /* testin.xcdatamodel */,
+			);
+			currentVersion = 29EB15562056EF550045A33A /* testin.xcdatamodel */;
+			path = MPH.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 29EB14EF2056ECC50045A33A /* Project object */;
+}
