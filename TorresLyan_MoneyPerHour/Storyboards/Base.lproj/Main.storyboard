@@ -355,55 +355,39 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78r-GJ-Pn4">
                                         <rect key="frame" x="0.0" y="140" width="375" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Shift:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kv-jk-Igi">
-                                                <rect key="frame" x="15" y="20" width="131.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="23"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.78036708047945202" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2018 at 3:00 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-nO-GNw">
-                                                <rect key="frame" x="146.5" y="20" width="213.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-sC-x7p">
+                                                <rect key="frame" x="10" y="10" width="355" height="40"/>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.43583438372300215" green="0.55801895155270231" blue="0.2613334735180442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="NBV-nO-GNw" firstAttribute="leading" secondItem="5Kv-jk-Igi" secondAttribute="trailing" id="5g0-eR-WMf"/>
-                                            <constraint firstItem="NBV-nO-GNw" firstAttribute="height" secondItem="5Kv-jk-Igi" secondAttribute="height" id="SMr-Mn-n9U"/>
-                                            <constraint firstItem="5Kv-jk-Igi" firstAttribute="leading" secondItem="78r-GJ-Pn4" secondAttribute="leading" constant="15" id="Ud4-cF-jde"/>
-                                            <constraint firstItem="5Kv-jk-Igi" firstAttribute="top" secondItem="78r-GJ-Pn4" secondAttribute="top" constant="20" id="Xp6-C0-hss"/>
-                                            <constraint firstAttribute="bottom" secondItem="5Kv-jk-Igi" secondAttribute="bottom" constant="20" id="d3b-pS-0dH"/>
-                                            <constraint firstAttribute="trailing" secondItem="NBV-nO-GNw" secondAttribute="trailing" constant="15" id="l1L-4n-1Zl"/>
-                                            <constraint firstItem="5Kv-jk-Igi" firstAttribute="width" secondItem="78r-GJ-Pn4" secondAttribute="width" multiplier="0.35" id="nt1-JL-O1d"/>
-                                            <constraint firstItem="NBV-nO-GNw" firstAttribute="centerY" secondItem="5Kv-jk-Igi" secondAttribute="centerY" id="vto-Ke-Kh7"/>
+                                            <constraint firstAttribute="trailing" secondItem="CWN-sC-x7p" secondAttribute="trailing" constant="10" id="Y4u-1o-DgQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="CWN-sC-x7p" secondAttribute="bottom" constant="10" id="Y9g-6H-5GB"/>
+                                            <constraint firstItem="CWN-sC-x7p" firstAttribute="top" secondItem="78r-GJ-Pn4" secondAttribute="top" constant="10" id="YHD-uQ-gSX"/>
+                                            <constraint firstItem="CWN-sC-x7p" firstAttribute="leading" secondItem="78r-GJ-Pn4" secondAttribute="leading" constant="10" id="emu-cQ-0Mb"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-sC-x7p">
-                                        <rect key="frame" x="0.0" y="10" width="375" height="40"/>
-                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Se6-eS-vtQ" userLabel="goal container">
-                                        <rect key="frame" x="10" y="50" width="356.5" height="90"/>
+                                        <rect key="frame" x="10" y="10" width="355" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="nHa-ba-I4b">
-                                                <rect key="frame" x="0.5" y="0.0" width="171" height="90"/>
-                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="60"/>
+                                                <rect key="frame" x="0.5" y="0.0" width="170.5" height="120"/>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="75"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-VX-Pnm">
-                                                <rect key="frame" x="185.5" y="0.0" width="171" height="90"/>
-                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="60"/>
+                                                <rect key="frame" x="184.5" y="0.0" width="170.5" height="120"/>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="75"/>
                                                 <color key="textColor" red="0.97182344540101528" green="0.97182344540101528" blue="0.97182344540101528" alpha="0.71179366438356162" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncs-8Y-EWu">
-                                                <rect key="frame" x="171.5" y="0.0" width="14" height="90"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                                <rect key="frame" x="171" y="0.0" width="13.5" height="120"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.67369434931506844" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -426,18 +410,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.57536636867646285" green="0.74294098984771573" blue="0.34190539670123421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="centerX" secondItem="EbB-G9-nE8" secondAttribute="centerX" id="6x0-W9-u1i"/>
+                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="leading" secondItem="EbB-G9-nE8" secondAttribute="leading" constant="10" id="4bK-Ag-LWz"/>
+                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="top" secondItem="EbB-G9-nE8" secondAttribute="top" constant="10" id="7EA-2X-QbU"/>
                                     <constraint firstItem="78r-GJ-Pn4" firstAttribute="leading" secondItem="EbB-G9-nE8" secondAttribute="leading" id="LVz-Gg-FXv"/>
-                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="width" secondItem="EbB-G9-nE8" secondAttribute="width" multiplier="0.95" id="MmK-k3-3Nd"/>
                                     <constraint firstAttribute="bottom" secondItem="78r-GJ-Pn4" secondAttribute="bottom" id="O6g-zL-PDf"/>
                                     <constraint firstItem="78r-GJ-Pn4" firstAttribute="height" secondItem="EbB-G9-nE8" secondAttribute="height" multiplier="0.3" id="QXR-k3-dgC"/>
                                     <constraint firstAttribute="trailing" secondItem="78r-GJ-Pn4" secondAttribute="trailing" id="SQx-lm-Ohh"/>
-                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="top" secondItem="CWN-sC-x7p" secondAttribute="bottom" id="bVR-sv-JwH"/>
-                                    <constraint firstItem="CWN-sC-x7p" firstAttribute="centerX" secondItem="EbB-G9-nE8" secondAttribute="centerX" id="g4D-gX-e34"/>
-                                    <constraint firstItem="CWN-sC-x7p" firstAttribute="width" secondItem="EbB-G9-nE8" secondAttribute="width" id="hSd-g2-Bp2"/>
-                                    <constraint firstItem="CWN-sC-x7p" firstAttribute="height" secondItem="EbB-G9-nE8" secondAttribute="height" multiplier="0.2" id="tFD-IV-bq7"/>
-                                    <constraint firstItem="CWN-sC-x7p" firstAttribute="top" secondItem="EbB-G9-nE8" secondAttribute="top" constant="10" id="uZ7-JS-03W"/>
-                                    <constraint firstItem="78r-GJ-Pn4" firstAttribute="top" secondItem="Se6-eS-vtQ" secondAttribute="bottom" id="wmy-6W-oVx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Se6-eS-vtQ" secondAttribute="trailing" constant="10" id="jzM-k7-mvW"/>
+                                    <constraint firstItem="78r-GJ-Pn4" firstAttribute="top" secondItem="Se6-eS-vtQ" secondAttribute="bottom" constant="10" id="s9y-SI-7mZ"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-Xv-dAG">
@@ -503,7 +483,6 @@
                         <outlet property="goalName" destination="CWN-sC-x7p" id="o1X-ME-E4R"/>
                         <outlet property="goalProgress" destination="nHa-ba-I4b" id="aAE-dd-f2V"/>
                         <outlet property="goalTotal" destination="TPh-VX-Pnm" id="ptg-AN-US4"/>
-                        <outlet property="nextShift" destination="NBV-nO-GNw" id="uH2-JT-zQS"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignUp" animates="NO" id="o0l-Ho-HMp"/>
                     </connections>
                 </viewController>

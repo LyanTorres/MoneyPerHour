@@ -16,7 +16,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var goalProgress: UILabel!
     @IBOutlet weak var goalTotal: UILabel!
     @IBOutlet weak var goalName: UILabel!
-    @IBOutlet weak var nextShift: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +88,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let userInfo = user {
             goalName.text = "Goal: " + userInfo.getGoalName()
             goalTotal.text = String(userInfo.getGoalTotal())
-            nextShift.text = "N/A"
         }
     }
     

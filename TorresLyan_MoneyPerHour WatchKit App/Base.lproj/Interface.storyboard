@@ -1,16 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TorresLyan_MoneyPerHour_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="128" height="37" alignment="center" text="Finish sign up!" textAlignment="center" id="W9u-9e-byz"/>
+                        <button width="125" height="67" alignment="center" verticalAlignment="center" title="Start" id="tVT-ds-8nn">
+                            <color key="backgroundColor" red="0.57536636870000002" green="0.74294098980000001" blue="0.34190539669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="7mg-dY-We1" kind="push" identifier="goToCounter" id="T91-9m-3KC"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="finishSignUpLBL" destination="W9u-9e-byz" id="Diy-Ha-2Qp"/>
+                        <outlet property="startButton" destination="tVT-ds-8nn" id="rfN-LF-xtW"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Active Shift Interface Controller-->
+        <scene sceneID="aEf-s8-m0Q">
+            <objects>
+                <controller id="7mg-dY-We1" customClass="ActiveShiftInterfaceController" customModule="TorresLyan_MoneyPerHour_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="50" alignment="left" text="Label" textAlignment="center" id="NPn-sq-XPv"/>
+                        <label width="1" height="50" alignment="left" text="Label" textAlignment="center" id="Z7X-gQ-uhc"/>
+                        <button width="1" alignment="left" title="Shift ended" id="Sjv-AM-WcC">
+                            <color key="backgroundColor" red="0.84595098350253806" green="0.22693195825188314" blue="0.20870741454922656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="shiftEndedWasPressed" destination="7mg-dY-We1" id="WmR-ch-6nk"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="goalEarnedLBL" destination="Z7X-gQ-uhc" id="r1b-u3-H6G"/>
+                        <outlet property="moneyEarnedLBL" destination="NPn-sq-XPv" id="Tyl-I1-P3J"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +71,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TorresLyan_MoneyPerHour_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
