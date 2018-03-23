@@ -34,7 +34,7 @@ class User {
         return goalTotal
     }
     
-    public func getGoalPercentage() ->Int {
+    public func getGoalPercentage() -> Int {
         return goalPercentage
     }
     

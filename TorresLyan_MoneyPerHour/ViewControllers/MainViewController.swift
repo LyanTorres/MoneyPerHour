@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     var user:User?
     var keys = UserKeys()
+    let session = WCSession.default
     
     @IBOutlet weak var goalProgress: UILabel!
     @IBOutlet weak var goalTotal: UILabel!
@@ -22,10 +24,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         getUserInfo()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(messageReceived), name: NSNotification.Name(rawValue: "newInfo"), object: nil)
+        
         // checking if this is the first time that the user is opening the application
         if user != nil {
             // it isn't so lets update the UI
             updateUI()
+            sendMessageToWatch()
         }
         
         // adding the gradient effect on the bacgground so that it's consistent
@@ -39,6 +44,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if user == nil {
             // they haven't so end them to the "sign up process"
             performSegue(withIdentifier: "goToSignUp", sender: self)
+        }
+    }
+    
+    @objc func messageReceived(info:NSNotification) {
+        // they finished a shift so we should add it to core data so we can store the info
+        let message = info.userInfo!
+        
+        DispatchQueue.main.async {
+            // do what you gotta do with the new data
+        }
+        
+    }
+    
+    func sendMessageToWatch() {
+        if self.session.isPaired && self.session.isWatchAppInstalled {
+            // we don't really need to send data, just letting the watch know that the user can interact with it now
+            self.session.sendMessage(["msg": user!.getHourlyPay()], replyHandler: nil, errorHandler: nil)
         }
     }
     
@@ -58,7 +80,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-
+    
     
     // TABLE VIEW FUNCTIONS -- SECTION
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +105,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.view.layer.insertSublayer(gradientLayer!, at: 0)
     }
-
+    
     func updateUI(){
         if let userInfo = user {
             goalName.text = "Goal: " + userInfo.getGoalName()
@@ -94,6 +116,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func unwindToVC(segue:UIStoryboardSegue) {
         getUserInfo()
         updateUI()
+        
+        // this means they added info so let's tell the watch that they can press the button to start
+        sendMessageToWatch()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -103,3 +128,4 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
 }
+

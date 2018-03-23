@@ -217,16 +217,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10%" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="soF-oi-qPK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="soF-oi-qPK">
                                         <rect key="frame" x="206" y="230" width="79" height="30"/>
                                         <color key="tintColor" red="0.20781537219999999" green="0.53402873520000005" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                        <connections>
-                                            <action selector="typedInPerc:" destination="UT2-un-FEC" eventType="editingChanged" id="lCh-qc-CAr"/>
-                                        </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much will be taken for each $1 made:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZZY-XN-HU8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much will be taken for each $1 made" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZZY-XN-HU8">
                                         <rect key="frame" x="5" y="260" width="222.5" height="30"/>
                                         <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="13"/>
                                         <color key="textColor" red="0.65531805200000004" green="0.65531805200000004" blue="0.65531805200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -312,7 +309,7 @@
                         <outlet property="goalNameTF" destination="fBs-dI-9ng" id="aG9-cd-npu"/>
                         <outlet property="goalTotalTF" destination="dJG-Yj-9JU" id="lV9-zh-0qR"/>
                         <outlet property="hourlyPayTF" destination="lRN-zr-vhG" id="N6H-XI-Ltt"/>
-                        <outlet property="percentageExampleLBL" destination="VNT-rn-ZZ5" id="mSh-O5-zdG"/>
+                        <outlet property="percentageExampleLBL" destination="VNT-rn-ZZ5" id="7EE-ml-1YI"/>
                         <outlet property="percentageGoalTF" destination="soF-oi-qPK" id="9lf-VS-OeS"/>
                         <segue destination="Wvf-iL-PJH" kind="unwind" identifier="unwindToMain" unwindAction="unwindToVCWithSegue:" id="27I-IX-9IN"/>
                     </connections>
@@ -364,10 +361,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.43583438372300215" green="0.55801895155270231" blue="0.2613334735180442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="CWN-sC-x7p" secondAttribute="trailing" constant="10" id="Y4u-1o-DgQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="CWN-sC-x7p" secondAttribute="bottom" constant="10" id="Y9g-6H-5GB"/>
-                                            <constraint firstItem="CWN-sC-x7p" firstAttribute="top" secondItem="78r-GJ-Pn4" secondAttribute="top" constant="10" id="YHD-uQ-gSX"/>
-                                            <constraint firstItem="CWN-sC-x7p" firstAttribute="leading" secondItem="78r-GJ-Pn4" secondAttribute="leading" constant="10" id="emu-cQ-0Mb"/>
+                                            <constraint firstAttribute="bottom" secondItem="CWN-sC-x7p" secondAttribute="bottom" constant="10" id="QOp-oh-iy0"/>
+                                            <constraint firstAttribute="trailing" secondItem="CWN-sC-x7p" secondAttribute="trailing" constant="10" id="kmM-mY-zWJ"/>
+                                            <constraint firstItem="CWN-sC-x7p" firstAttribute="leading" secondItem="78r-GJ-Pn4" secondAttribute="leading" constant="10" id="wag-fR-Oov"/>
+                                            <constraint firstItem="CWN-sC-x7p" firstAttribute="top" secondItem="78r-GJ-Pn4" secondAttribute="top" constant="10" id="xWp-OH-7iF"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Se6-eS-vtQ" userLabel="goal container">
@@ -375,13 +372,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="nHa-ba-I4b">
                                                 <rect key="frame" x="0.5" y="0.0" width="170.5" height="120"/>
-                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="75"/>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="80"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-VX-Pnm">
                                                 <rect key="frame" x="184.5" y="0.0" width="170.5" height="120"/>
-                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="75"/>
+                                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="80"/>
                                                 <color key="textColor" red="0.97182344540101528" green="0.97182344540101528" blue="0.97182344540101528" alpha="0.71179366438356162" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -410,14 +407,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.57536636867646285" green="0.74294098984771573" blue="0.34190539670123421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="leading" secondItem="EbB-G9-nE8" secondAttribute="leading" constant="10" id="4bK-Ag-LWz"/>
-                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="top" secondItem="EbB-G9-nE8" secondAttribute="top" constant="10" id="7EA-2X-QbU"/>
+                                    <constraint firstItem="78r-GJ-Pn4" firstAttribute="top" secondItem="Se6-eS-vtQ" secondAttribute="bottom" constant="10" id="KY9-IF-ECH"/>
                                     <constraint firstItem="78r-GJ-Pn4" firstAttribute="leading" secondItem="EbB-G9-nE8" secondAttribute="leading" id="LVz-Gg-FXv"/>
                                     <constraint firstAttribute="bottom" secondItem="78r-GJ-Pn4" secondAttribute="bottom" id="O6g-zL-PDf"/>
                                     <constraint firstItem="78r-GJ-Pn4" firstAttribute="height" secondItem="EbB-G9-nE8" secondAttribute="height" multiplier="0.3" id="QXR-k3-dgC"/>
                                     <constraint firstAttribute="trailing" secondItem="78r-GJ-Pn4" secondAttribute="trailing" id="SQx-lm-Ohh"/>
-                                    <constraint firstAttribute="trailing" secondItem="Se6-eS-vtQ" secondAttribute="trailing" constant="10" id="jzM-k7-mvW"/>
-                                    <constraint firstItem="78r-GJ-Pn4" firstAttribute="top" secondItem="Se6-eS-vtQ" secondAttribute="bottom" constant="10" id="s9y-SI-7mZ"/>
+                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="top" secondItem="EbB-G9-nE8" secondAttribute="top" constant="10" id="V3u-vs-nuT"/>
+                                    <constraint firstItem="Se6-eS-vtQ" firstAttribute="leading" secondItem="EbB-G9-nE8" secondAttribute="leading" constant="10" id="gMP-au-Wd6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Se6-eS-vtQ" secondAttribute="trailing" constant="10" id="hKI-E7-uxg"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-Xv-dAG">

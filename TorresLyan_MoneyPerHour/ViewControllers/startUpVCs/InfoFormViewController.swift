@@ -57,7 +57,7 @@ class InfoFormViewController: UIViewController {
             }
             
         }else {
-             // tell them something went wrong, trying to be specific
+            // tell them something went wrong, trying to be specific
             showAlert(title: "Missing fields", message: "Please make sure to fill out all present fields.")
         }
         
@@ -81,7 +81,7 @@ class InfoFormViewController: UIViewController {
     
     
     // SUPERFICIAL
-
+    
     @IBAction func typedInPerc(_ sender: UITextField) {
         if let input = sender.text{
             if let percentage: Int = Int(input) {
@@ -108,3 +108,4 @@ class InfoFormViewController: UIViewController {
     }
     
 }
+

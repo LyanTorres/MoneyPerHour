@@ -14,7 +14,6 @@ class UserKeys {
     var goalName = "goalName"
     var goalTotal = "goalTotal"
     var goalPercentage = "goalPercentage"
-    var lastShift = "lastShift"
     
     func getPayKey() -> String {
         return hourlyPay
@@ -30,10 +29,6 @@ class UserKeys {
     
     func getPercentageKey() -> String {
         return goalPercentage
-    }
-    
-    func getLastShift() -> String {
-        return lastShift
     }
     
 }

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29B200BC206573DD00C3D22C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B200BB206573DD00C3D22C /* User.swift */; };
-		29B200BE2065740000C3D22C /* UserKeysForUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B200BD2065740000C3D22C /* UserKeysForUserDefault.swift */; };
-		29B200C02065783500C3D22C /* ActiveShiftInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B200BF2065783500C3D22C /* ActiveShiftInterfaceController.swift */; };
+		29D647812065C1D20045F796 /* ActiveShiftInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647802065C1D20045F796 /* ActiveShiftInterfaceController.swift */; };
+		29D647842065C21D0045F796 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647832065C21D0045F796 /* User.swift */; };
+		29D647862065C2320045F796 /* UserKeysForUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647852065C2320045F796 /* UserKeysForUserDefault.swift */; };
 		29EB14FB2056ECC50045A33A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FA2056ECC50045A33A /* AppDelegate.swift */; };
 		29EB14FD2056ECC50045A33A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FC2056ECC50045A33A /* ViewController.swift */; };
 		29EB15002056ECC50045A33A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EB14FE2056ECC50045A33A /* Main.storyboard */; };
@@ -74,9 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		29B200BB206573DD00C3D22C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		29B200BD2065740000C3D22C /* UserKeysForUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeysForUserDefault.swift; sourceTree = "<group>"; };
-		29B200BF2065783500C3D22C /* ActiveShiftInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveShiftInterfaceController.swift; sourceTree = "<group>"; };
+		29D647802065C1D20045F796 /* ActiveShiftInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveShiftInterfaceController.swift; sourceTree = "<group>"; };
+		29D647832065C21D0045F796 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		29D647852065C2320045F796 /* UserKeysForUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeysForUserDefault.swift; sourceTree = "<group>"; };
 		29EB14F72056ECC50045A33A /* TorresLyan_MoneyPerHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorresLyan_MoneyPerHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EB14FA2056ECC50045A33A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29EB14FC2056ECC50045A33A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,22 +121,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29B200B9206573AE00C3D22C /* ViewControllers */ = {
+		29D647822065C2100045F796 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				29EB151D2056ECC50045A33A /* InterfaceController.swift */,
-				29B200BF2065783500C3D22C /* ActiveShiftInterfaceController.swift */,
-				29EB151F2056ECC50045A33A /* ExtensionDelegate.swift */,
-				29EB15212056ECC50045A33A /* NotificationController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		29B200BA206573C100C3D22C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				29B200BB206573DD00C3D22C /* User.swift */,
-				29B200BD2065740000C3D22C /* UserKeysForUserDefault.swift */,
+				29D647832065C21D0045F796 /* User.swift */,
+				29D647852065C2320045F796 /* UserKeysForUserDefault.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -187,8 +176,11 @@
 		29EB151C2056ECC50045A33A /* TorresLyan_MoneyPerHour WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				29B200B9206573AE00C3D22C /* ViewControllers */,
-				29B200BA206573C100C3D22C /* Classes */,
+				29D647822065C2100045F796 /* Classes */,
+				29EB151D2056ECC50045A33A /* InterfaceController.swift */,
+				29D647802065C1D20045F796 /* ActiveShiftInterfaceController.swift */,
+				29EB151F2056ECC50045A33A /* ExtensionDelegate.swift */,
+				29EB15212056ECC50045A33A /* NotificationController.swift */,
 				29EB15232056ECC50045A33A /* Assets.xcassets */,
 				29EB15252056ECC50045A33A /* Info.plist */,
 				29EB15262056ECC50045A33A /* PushNotificationPayload.apns */,
@@ -392,12 +384,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B200C02065783500C3D22C /* ActiveShiftInterfaceController.swift in Sources */,
-				29B200BC206573DD00C3D22C /* User.swift in Sources */,
 				29EB15222056ECC50045A33A /* NotificationController.swift in Sources */,
 				29EB15202056ECC50045A33A /* ExtensionDelegate.swift in Sources */,
+				29D647812065C1D20045F796 /* ActiveShiftInterfaceController.swift in Sources */,
+				29D647842065C21D0045F796 /* User.swift in Sources */,
 				29EB151E2056ECC50045A33A /* InterfaceController.swift in Sources */,
-				29B200BE2065740000C3D22C /* UserKeysForUserDefault.swift in Sources */,
+				29D647862065C2320045F796 /* UserKeysForUserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
