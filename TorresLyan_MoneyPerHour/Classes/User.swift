@@ -13,9 +13,9 @@ class User {
     var hourlyPay: Double
     var goalName: String
     var goalTotal: Int
-    var goalPercentage: Double
+    var goalPercentage: Int
     
-    public init(hourlyPay:Double, goalName:String, goalTotal:Int, goalPercentage:Double) {
+    public init(hourlyPay:Double, goalName:String, goalTotal:Int, goalPercentage:Int) {
         self.hourlyPay = hourlyPay
         self.goalName = goalName
         self.goalTotal = goalTotal
@@ -34,7 +34,7 @@ class User {
         return goalTotal
     }
     
-    public func getGoalPercentage() -> Double {
+    public func getGoalPercentage() ->Int {
         return goalPercentage
     }
     
@@ -50,7 +50,7 @@ class User {
         self.goalTotal = goalTotal
     }
     
-    public func setGoalPercentage(goalPercentage: Double){
+    public func setGoalPercentage(goalPercentage: Int){
         self.goalPercentage = goalPercentage
     }
     

@@ -217,13 +217,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="soF-oi-qPK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10%" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="soF-oi-qPK">
                                         <rect key="frame" x="206" y="230" width="79" height="30"/>
                                         <color key="tintColor" red="0.20781537219999999" green="0.53402873520000005" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="typedInPerc:" destination="UT2-un-FEC" eventType="editingChanged" id="lCh-qc-CAr"/>
+                                        </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much will be taken for each $1 made" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZZY-XN-HU8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much will be taken for each $1 made:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZZY-XN-HU8">
                                         <rect key="frame" x="5" y="260" width="222.5" height="30"/>
                                         <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="13"/>
                                         <color key="textColor" red="0.65531805200000004" green="0.65531805200000004" blue="0.65531805200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -309,6 +312,7 @@
                         <outlet property="goalNameTF" destination="fBs-dI-9ng" id="aG9-cd-npu"/>
                         <outlet property="goalTotalTF" destination="dJG-Yj-9JU" id="lV9-zh-0qR"/>
                         <outlet property="hourlyPayTF" destination="lRN-zr-vhG" id="N6H-XI-Ltt"/>
+                        <outlet property="percentageExampleLBL" destination="VNT-rn-ZZ5" id="mSh-O5-zdG"/>
                         <outlet property="percentageGoalTF" destination="soF-oi-qPK" id="9lf-VS-OeS"/>
                         <segue destination="Wvf-iL-PJH" kind="unwind" identifier="unwindToMain" unwindAction="unwindToVCWithSegue:" id="27I-IX-9IN"/>
                     </connections>

@@ -14,6 +14,7 @@ class InfoFormViewController: UIViewController {
     @IBOutlet weak var goalNameTF: UITextField!
     @IBOutlet weak var goalTotalTF: UITextField!
     @IBOutlet weak var percentageGoalTF: UITextField!
+    @IBOutlet weak var percentageExampleLBL: UILabel!
     
     var user: User?
     var keys = UserKeys()
@@ -21,6 +22,16 @@ class InfoFormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let currentUser = user {
+            
+            hourlyPayTF.text = String(currentUser.getHourlyPay())
+            goalNameTF.text = currentUser.getGoalName()
+            goalTotalTF.text = String(currentUser.getGoalTotal())
+            percentageGoalTF.text = String(currentUser.getGoalPercentage())
+            percentageExampleLBL.text = "$\(String(format: "%.2f", currentUser.getGoalPercentage()))"
+            
+        }
         
         createGradientLayer()
     }
@@ -35,7 +46,7 @@ class InfoFormViewController: UIViewController {
         if let hourlyPayString = hourlyPayTF.text, let goalName = goalNameTF.text, let goalTotalString = goalTotalTF.text, let goalPercentageString = percentageGoalTF.text {
             
             // make sure that some of them are numbers, becasue that's what we need
-            if let hourlyPay = Double(hourlyPayString), let goalTotal = Int(goalTotalString), let goalPercentage = Double(goalPercentageString) {
+            if let hourlyPay = Double(hourlyPayString), let goalTotal = Int(goalTotalString), let goalPercentage = Int(goalPercentageString) {
                 user = User.init(hourlyPay: hourlyPay, goalName: goalName, goalTotal: goalTotal, goalPercentage: goalPercentage)
                 saveUserInfo(user: user!)
                 performSegue(withIdentifier: "unwindToMain", sender: self)
@@ -70,6 +81,20 @@ class InfoFormViewController: UIViewController {
     
     
     // SUPERFICIAL
+
+    @IBAction func typedInPerc(_ sender: UITextField) {
+        if let input = sender.text{
+            if let percentage: Int = Int(input) {
+                
+                let perc = Double(percentage) / 100.00
+                percentageExampleLBL.text = "$\(String(format: "%.2f", perc))"
+                
+            }
+        }
+    }
+    
+    
+    
     func createGradientLayer() {
         var gradientLayer: CAGradientLayer?
         

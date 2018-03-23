@@ -52,7 +52,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             if  let goalName = UserDefaults.standard.string(forKey: keys.getGoalNameKey()) {
                 
                 let goalTotal = UserDefaults.standard.integer(forKey: keys.getTotalKey())
-                let goalPercentage = UserDefaults.standard.double(forKey: keys.getPercentageKey())
+                let goalPercentage = UserDefaults.standard.integer(forKey: keys.getPercentageKey())
                 
                 user = User.init(hourlyPay: hourlyPay, goalName: goalName, goalTotal: goalTotal, goalPercentage: goalPercentage)
                 
@@ -96,6 +96,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func unwindToVC(segue:UIStoryboardSegue) {
         getUserInfo()
         updateUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? InfoFormViewController {
+            destination.user = user
+        }
     }
     
 }
