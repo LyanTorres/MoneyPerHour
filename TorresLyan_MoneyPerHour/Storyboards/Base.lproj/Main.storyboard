@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -421,14 +422,52 @@
                                 <rect key="frame" x="0.0" y="340" width="375" height="327"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="day_of_week" id="AJZ-7H-Q5X">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="day_of_week" rowHeight="60" id="AJZ-7H-Q5X" customClass="DayTableViewCell" customModule="TorresLyan_MoneyPerHour" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AJZ-7H-Q5X" id="C3x-Z0-WYT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/31/2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0eF-qG-VL0">
+                                                    <rect key="frame" x="20" y="16" width="112.5" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ycZ-hQ-l5Q">
+                                                    <rect key="frame" x="157.5" y="16" width="90" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$64.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="wZx-Gq-XOX">
+                                                    <rect key="frame" x="252.5" y="16" width="102.5" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" red="0.57536636870000002" green="0.74294098980000001" blue="0.34190539669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wZx-Gq-XOX" secondAttribute="bottom" constant="5" id="4zN-a3-DVx"/>
+                                                <constraint firstItem="wZx-Gq-XOX" firstAttribute="top" secondItem="C3x-Z0-WYT" secondAttribute="topMargin" constant="5" id="KCR-qT-iga"/>
+                                                <constraint firstItem="ycZ-hQ-l5Q" firstAttribute="leading" secondItem="0eF-qG-VL0" secondAttribute="trailing" constant="25" id="LiM-hf-owp"/>
+                                                <constraint firstItem="0eF-qG-VL0" firstAttribute="width" secondItem="C3x-Z0-WYT" secondAttribute="width" multiplier="0.3" id="MiJ-z8-Vru"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0eF-qG-VL0" secondAttribute="bottom" constant="5" id="QFe-3l-iu5"/>
+                                                <constraint firstItem="0eF-qG-VL0" firstAttribute="leading" secondItem="C3x-Z0-WYT" secondAttribute="leadingMargin" constant="5" id="Try-Uu-pVk"/>
+                                                <constraint firstItem="wZx-Gq-XOX" firstAttribute="leading" secondItem="ycZ-hQ-l5Q" secondAttribute="trailing" constant="5" id="f1O-T9-XrB"/>
+                                                <constraint firstItem="ycZ-hQ-l5Q" firstAttribute="width" secondItem="0eF-qG-VL0" secondAttribute="width" multiplier="0.8" id="gut-Wc-Dnt"/>
+                                                <constraint firstItem="ycZ-hQ-l5Q" firstAttribute="height" secondItem="0eF-qG-VL0" secondAttribute="height" id="hUA-7x-t8X"/>
+                                                <constraint firstItem="0eF-qG-VL0" firstAttribute="top" secondItem="C3x-Z0-WYT" secondAttribute="topMargin" constant="5" id="mHe-sf-o8i"/>
+                                                <constraint firstItem="ycZ-hQ-l5Q" firstAttribute="centerY" secondItem="0eF-qG-VL0" secondAttribute="centerY" id="qQC-eq-2kf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wZx-Gq-XOX" secondAttribute="trailing" constant="5" id="qgE-jc-nqB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.210142408803623" green="0.210142408803623" blue="0.210142408803623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="dateLBL" destination="0eF-qG-VL0" id="TfN-FN-RVO"/>
+                                            <outlet property="earningsLBL" destination="wZx-Gq-XOX" id="iDG-eS-B4t"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

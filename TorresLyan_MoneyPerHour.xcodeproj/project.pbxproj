@@ -11,6 +11,7 @@
 		29D647842065C21D0045F796 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647832065C21D0045F796 /* User.swift */; };
 		29D647862065C2320045F796 /* UserKeysForUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647852065C2320045F796 /* UserKeysForUserDefault.swift */; };
 		29D647882065CB640045F796 /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647872065CB640045F796 /* WorkDay.swift */; };
+		29D6478A2065D5C70045F796 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647892065D5C70045F796 /* DayTableViewCell.swift */; };
 		29EB14FB2056ECC50045A33A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FA2056ECC50045A33A /* AppDelegate.swift */; };
 		29EB14FD2056ECC50045A33A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FC2056ECC50045A33A /* ViewController.swift */; };
 		29EB15002056ECC50045A33A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EB14FE2056ECC50045A33A /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 		29D647832065C21D0045F796 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29D647852065C2320045F796 /* UserKeysForUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeysForUserDefault.swift; sourceTree = "<group>"; };
 		29D647872065CB640045F796 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
+		29D647892065D5C70045F796 /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
 		29EB14F72056ECC50045A33A /* TorresLyan_MoneyPerHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorresLyan_MoneyPerHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EB14FA2056ECC50045A33A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29EB14FC2056ECC50045A33A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				29EB1564205880530045A33A /* startUpVCs */,
 				29EB15602058742D0045A33A /* MainViewController.swift */,
+				29D647892065D5C70045F796 /* DayTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			files = (
 				29EB155F20583DFA0045A33A /* UserKeysForUserDefault.swift in Sources */,
 				29EB155B205822880045A33A /* InfoFormViewController.swift in Sources */,
+				29D6478A2065D5C70045F796 /* DayTableViewCell.swift in Sources */,
 				29EB14FD2056ECC50045A33A /* ViewController.swift in Sources */,
 				29EB155D205825BB0045A33A /* User.swift in Sources */,
 				29EB1559205818FF0045A33A /* GettingStartedViewController.swift in Sources */,

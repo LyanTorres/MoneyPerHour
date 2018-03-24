@@ -59,6 +59,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let result = formatter.string(from: date)
             
             self.daysWorked.append(WorkDay.init(date: result, hoursWorked: (message["moneyMade"] as? Double)!, earnings: (message["hoursWorked"] as? Double)!))
+        print(daysWorked.count)
         
     }
     
@@ -88,10 +89,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // TABLE VIEW FUNCTIONS -- SECTION
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return daysWorked.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "day_of_week", for: indexPath) as? DayTableViewCell {
+            
+            cell.dateLBL.text = daysWorked[indexPath.row].getDate()
+            cell.earningsLBL.text = String(daysWorked[indexPath.row].getEarnings())
+            
+        }
         return UITableViewCell()
     }
     

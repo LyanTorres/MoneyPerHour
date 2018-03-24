@@ -15,6 +15,7 @@ class ActiveShiftInterfaceController: WKInterfaceController{
     
     @IBOutlet var endShiftButton: WKInterfaceButton!
     @IBOutlet var moneyEarnedLBL: WKInterfaceLabel!
+    @IBOutlet var moneyToEarnLBL: WKInterfaceLabel!
     var user: User?
     var keys = UserKeys()
     var eightHourShiftTotal:Double!
@@ -35,7 +36,13 @@ class ActiveShiftInterfaceController: WKInterfaceController{
             moneyPerSec = ((currentUser.getHourlyPay() / 60) / 60)
             
             if let shift = eightHourShiftTotal {
-                moneyEarnedLBL.setText("$0.00 / $\(String(format: "%.2f", shift))")
+                let font = UIFont.systemFont(ofSize: 40.0, weight: UIFont.Weight.medium)
+                let attrStr = NSAttributedString(string: "$0.00", attributes: [NSAttributedStringKey.font: font])
+                moneyEarnedLBL.setAttributedText(attrStr)
+                
+                let font2 = UIFont.systemFont(ofSize: 32.0, weight: UIFont.Weight.medium)
+                let attrStr2 = NSAttributedString(string: "$\(String(format: "%.2f", shift))", attributes: [NSAttributedStringKey.font: font2])
+                moneyToEarnLBL.setAttributedText(attrStr2)
             }
         }
     }
@@ -67,7 +74,9 @@ class ActiveShiftInterfaceController: WKInterfaceController{
             timeWorked += 0.01
             
             if let shift = eightHourShiftTotal{
-                moneyEarnedLBL.setText("$\(String(format: "%.2f", moneyMade)) / $\(String(format: "%.2f", shift))")
+                let font = UIFont.systemFont(ofSize: 40.0, weight: UIFont.Weight.medium)
+                let attrStr = NSAttributedString(string: "$\(String(format: "%.2f", moneyMade))", attributes: [NSAttributedStringKey.font: font])
+                moneyEarnedLBL.setAttributedText(attrStr)
             }
         } else {
             
@@ -86,6 +95,7 @@ class ActiveShiftInterfaceController: WKInterfaceController{
         
         // save necessary information
         stopCounter()
+        
         let applicationDict = ["moneyMade": moneyMade, "hoursWorked": timeWorked]
         self.session.sendMessage(applicationDict, replyHandler: nil, errorHandler: nil)
         
