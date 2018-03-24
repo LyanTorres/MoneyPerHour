@@ -422,7 +422,7 @@
                                 <rect key="frame" x="0.0" y="340" width="375" height="327"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="day_of_week" rowHeight="60" id="AJZ-7H-Q5X" customClass="DayTableViewCell" customModule="TorresLyan_MoneyPerHour" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="day_of_week" rowHeight="60" id="AJZ-7H-Q5X" customClass="DayTableViewCell" customModule="TorresLyan_MoneyPerHour" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AJZ-7H-Q5X" id="C3x-Z0-WYT">
@@ -448,6 +448,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="wZx-Gq-XOX" secondAttribute="bottom" constant="5" id="4zN-a3-DVx"/>
                                                 <constraint firstItem="wZx-Gq-XOX" firstAttribute="top" secondItem="C3x-Z0-WYT" secondAttribute="topMargin" constant="5" id="KCR-qT-iga"/>
@@ -463,10 +464,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="wZx-Gq-XOX" secondAttribute="trailing" constant="5" id="qgE-jc-nqB"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.210142408803623" green="0.210142408803623" blue="0.210142408803623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="dateLBL" destination="0eF-qG-VL0" id="TfN-FN-RVO"/>
                                             <outlet property="earningsLBL" destination="wZx-Gq-XOX" id="iDG-eS-B4t"/>
+                                            <outlet property="timeWorkedLBL" destination="ycZ-hQ-l5Q" id="coE-Wn-t7c"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

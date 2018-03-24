@@ -13,6 +13,7 @@ class DayTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var earningsLBL: UILabel!
+    @IBOutlet weak var timeWorkedLBL: UILabel!
     
     
     override func awakeFromNib() {

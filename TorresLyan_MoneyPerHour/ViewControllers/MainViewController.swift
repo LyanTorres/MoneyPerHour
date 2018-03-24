@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import CoreData
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,6 +20,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var goalProgress: UILabel!
     @IBOutlet weak var goalTotal: UILabel!
     @IBOutlet weak var goalName: UILabel!
+    
+    var tableView: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,16 +53,20 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func messageReceived(info:NSNotification) {
         // they finished a shift so we should add it to core data so we can store the info
-            let message = info.userInfo!
-            
-            let date = Date()
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd/MM/yyyy"
-            
-            let result = formatter.string(from: date)
-            
-            self.daysWorked.append(WorkDay.init(date: result, hoursWorked: (message["moneyMade"] as? Double)!, earnings: (message["hoursWorked"] as? Double)!))
+        let message = info.userInfo!
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        
+        let result = formatter.string(from: date)
+        
+        self.daysWorked.append(WorkDay.init(date: result, hoursWorked: (message["moneyMade"] as? Double)!, earnings: (message["hoursWorked"] as? Double)!))
         print(daysWorked.count)
+        
+        DispatchQueue.main.async {
+            self.tableView?.reloadData()
+        }
         
     }
     
@@ -89,20 +96,34 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // TABLE VIEW FUNCTIONS -- SECTION
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.tableView = tableView
         return daysWorked.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "day_of_week", for: indexPath) as? DayTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "day_of_week") as? DayTableViewCell {
             
             cell.dateLBL.text = daysWorked[indexPath.row].getDate()
-            cell.earningsLBL.text = String(daysWorked[indexPath.row].getEarnings())
-            
+            cell.earningsLBL.text = "$\(String(daysWorked[indexPath.row].getEarnings()))"
+            cell.timeWorkedLBL.text = "\(String(format: "%.2f", daysWorked[indexPath.row].getHoursWorked())) hrs"
+            return cell
         }
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            if indexPath.row < daysWorked.count {
+                daysWorked.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
+        }
+    }
     
     
     // SUPERFICIAL STUFF, not really relevant to functionaility
