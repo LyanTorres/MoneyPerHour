@@ -50,7 +50,6 @@ class InterfaceController: WKInterfaceController {
         user = User.init(hourlyPay: (message!["msg"] as? Double)!, goalName: "", goalTotal: 0, goalPercentage: 0)
         hideOrShowLBL(userSignedUp: true)
         saveUserInfo(user: user!)
-        
     }
     
     // saving their info into user defaults so that we can get them when we need them and at start up
@@ -78,6 +77,7 @@ class InterfaceController: WKInterfaceController {
             }
         }
     }
+    
     
     func hideOrShowLBL(userSignedUp: Bool){
         startButton.setEnabled(userSignedUp)

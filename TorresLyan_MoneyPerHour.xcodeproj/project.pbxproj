@@ -10,6 +10,7 @@
 		29D647812065C1D20045F796 /* ActiveShiftInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647802065C1D20045F796 /* ActiveShiftInterfaceController.swift */; };
 		29D647842065C21D0045F796 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647832065C21D0045F796 /* User.swift */; };
 		29D647862065C2320045F796 /* UserKeysForUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647852065C2320045F796 /* UserKeysForUserDefault.swift */; };
+		29D647882065CB640045F796 /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D647872065CB640045F796 /* WorkDay.swift */; };
 		29EB14FB2056ECC50045A33A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FA2056ECC50045A33A /* AppDelegate.swift */; };
 		29EB14FD2056ECC50045A33A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB14FC2056ECC50045A33A /* ViewController.swift */; };
 		29EB15002056ECC50045A33A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EB14FE2056ECC50045A33A /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		29D647802065C1D20045F796 /* ActiveShiftInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveShiftInterfaceController.swift; sourceTree = "<group>"; };
 		29D647832065C21D0045F796 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29D647852065C2320045F796 /* UserKeysForUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeysForUserDefault.swift; sourceTree = "<group>"; };
+		29D647872065CB640045F796 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
 		29EB14F72056ECC50045A33A /* TorresLyan_MoneyPerHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorresLyan_MoneyPerHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EB14FA2056ECC50045A33A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29EB14FC2056ECC50045A33A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				29EB155C205825BB0045A33A /* User.swift */,
 				29EB155E20583DFA0045A33A /* UserKeysForUserDefault.swift */,
+				29D647872065CB640045F796 /* WorkDay.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				29EB14FD2056ECC50045A33A /* ViewController.swift in Sources */,
 				29EB155D205825BB0045A33A /* User.swift in Sources */,
 				29EB1559205818FF0045A33A /* GettingStartedViewController.swift in Sources */,
+				29D647882065CB640045F796 /* WorkDay.swift in Sources */,
 				29EB14FB2056ECC50045A33A /* AppDelegate.swift in Sources */,
 				29EB15572056EF550045A33A /* MPH.xcdatamodeld in Sources */,
 				29EB15612058742D0045A33A /* MainViewController.swift in Sources */,

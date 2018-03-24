@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newInfo"), object: self, userInfo: message)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "messageFromWatch"), object: self, userInfo: message)
     }
     
     

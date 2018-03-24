@@ -26,7 +26,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
             let session = WCSession.default
             session.delegate = self as? WCSessionDelegate
             session.activate()
-            
         }
     }
     

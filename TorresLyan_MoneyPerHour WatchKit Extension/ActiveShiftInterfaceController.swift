@@ -11,7 +11,7 @@ import Foundation
 import WatchConnectivity
 
 
-class ActiveShiftInterfaceController: WKInterfaceController {
+class ActiveShiftInterfaceController: WKInterfaceController{
     
     @IBOutlet var endShiftButton: WKInterfaceButton!
     @IBOutlet var moneyEarnedLBL: WKInterfaceLabel!
@@ -22,6 +22,7 @@ class ActiveShiftInterfaceController: WKInterfaceController {
     var moneyPerSec: Double!
     var moneyMade = 0.0
     var timeWorked = 0.0
+    let session = WCSession.default
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -37,7 +38,6 @@ class ActiveShiftInterfaceController: WKInterfaceController {
                 moneyEarnedLBL.setText("$0.00 / $\(String(format: "%.2f", shift))")
             }
         }
-        
     }
     
     override func willActivate() {
@@ -86,8 +86,8 @@ class ActiveShiftInterfaceController: WKInterfaceController {
         
         // save necessary information
         stopCounter()
-        let applicationDict = ["moneyMade": moneyMade, "timeWorked": timeWorked]
-        let transfer = WCSession.default.transferUserInfo(applicationDict)
+        let applicationDict = ["moneyMade": moneyMade, "hoursWorked": timeWorked]
+        self.session.sendMessage(applicationDict, replyHandler: nil, errorHandler: nil)
         
         self.dismiss()
     }

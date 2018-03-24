@@ -14,6 +14,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var user:User?
     var keys = UserKeys()
     let session = WCSession.default
+    var daysWorked: [WorkDay] = []
     
     @IBOutlet weak var goalProgress: UILabel!
     @IBOutlet weak var goalTotal: UILabel!
@@ -24,7 +25,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         getUserInfo()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(messageReceived), name: NSNotification.Name(rawValue: "newInfo"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(messageReceived(info:)), name: NSNotification.Name(rawValue: "messageFromWatch"), object: nil)
         
         // checking if this is the first time that the user is opening the application
         if user != nil {
@@ -49,17 +50,20 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func messageReceived(info:NSNotification) {
         // they finished a shift so we should add it to core data so we can store the info
-        let message = info.userInfo!
-        
-        DispatchQueue.main.async {
-            // do what you gotta do with the new data
-        }
+            let message = info.userInfo!
+            
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/yyyy"
+            
+            let result = formatter.string(from: date)
+            
+            self.daysWorked.append(WorkDay.init(date: result, hoursWorked: (message["moneyMade"] as? Double)!, earnings: (message["hoursWorked"] as? Double)!))
         
     }
     
     func sendMessageToWatch() {
         if self.session.isPaired && self.session.isWatchAppInstalled {
-            // we don't really need to send data, just letting the watch know that the user can interact with it now
             self.session.sendMessage(["msg": user!.getHourlyPay()], replyHandler: nil, errorHandler: nil)
         }
     }
