@@ -14,6 +14,7 @@ class UserKeys {
     var goalName = "goalName"
     var goalTotal = "goalTotal"
     var goalPercentage = "goalPercentage"
+    var goalProgress = "goalProgress"
     
     func getPayKey() -> String {
         return hourlyPay
@@ -31,4 +32,7 @@ class UserKeys {
         return goalPercentage
     }
     
+    func getGoalProgress() -> String {
+        return goalProgress
+    }
 }

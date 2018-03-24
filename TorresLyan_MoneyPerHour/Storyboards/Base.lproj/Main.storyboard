@@ -249,6 +249,15 @@
                                             <action selector="saveButtonWasPressed:" destination="UT2-un-FEC" eventType="touchUpInside" id="2I4-Se-rrr"/>
                                         </connections>
                                     </button>
+                                    <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yOR-AF-8Te">
+                                        <rect key="frame" x="236" y="319.5" width="51" height="31"/>
+                                    </switch>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZD-yM-C73">
+                                        <rect key="frame" x="5" y="319.5" width="101.5" height="31"/>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="jjR-zg-Xd8" firstAttribute="leading" secondItem="OhC-22-FTU" secondAttribute="leading" constant="5" id="5XJ-Y7-7kD"/>
@@ -260,18 +269,23 @@
                                     <constraint firstItem="MG2-Ta-XZz" firstAttribute="height" secondItem="H9A-aY-dbo" secondAttribute="height" id="JTd-Hf-OfI"/>
                                     <constraint firstItem="H9A-aY-dbo" firstAttribute="width" secondItem="jjR-zg-Xd8" secondAttribute="width" id="JeN-jq-wPR"/>
                                     <constraint firstItem="VNT-rn-ZZ5" firstAttribute="height" secondItem="ZZY-XN-HU8" secondAttribute="height" id="Kqa-qR-G6M"/>
+                                    <constraint firstItem="6ZD-yM-C73" firstAttribute="height" secondItem="yOR-AF-8Te" secondAttribute="height" id="KuP-Pk-aSj"/>
                                     <constraint firstItem="dJG-Yj-9JU" firstAttribute="centerY" secondItem="H9A-aY-dbo" secondAttribute="centerY" id="MII-xf-oZb"/>
                                     <constraint firstItem="fBs-dI-9ng" firstAttribute="height" secondItem="jjR-zg-Xd8" secondAttribute="height" id="Mp1-yU-RoN"/>
                                     <constraint firstItem="WGy-Nc-jOh" firstAttribute="leading" secondItem="OhC-22-FTU" secondAttribute="leading" constant="5" id="OCS-Q5-awC"/>
+                                    <constraint firstItem="yOR-AF-8Te" firstAttribute="top" secondItem="VNT-rn-ZZ5" secondAttribute="bottom" constant="30" id="Q2K-va-C1O"/>
                                     <constraint firstItem="fBs-dI-9ng" firstAttribute="leading" secondItem="jjR-zg-Xd8" secondAttribute="trailing" constant="15" id="QmJ-CU-HuS"/>
+                                    <constraint firstItem="6ZD-yM-C73" firstAttribute="leading" secondItem="OhC-22-FTU" secondAttribute="leading" constant="5" id="RR2-dX-zaC"/>
                                     <constraint firstItem="MG2-Ta-XZz" firstAttribute="top" secondItem="H9A-aY-dbo" secondAttribute="bottom" constant="30" id="Rsh-Iw-SuR"/>
                                     <constraint firstItem="soF-oi-qPK" firstAttribute="leading" secondItem="MG2-Ta-XZz" secondAttribute="trailing" constant="15" id="Vzm-3v-cag"/>
                                     <constraint firstItem="dJG-Yj-9JU" firstAttribute="height" secondItem="H9A-aY-dbo" secondAttribute="height" id="WGd-Z4-xhr"/>
                                     <constraint firstAttribute="trailing" secondItem="soF-oi-qPK" secondAttribute="trailing" constant="15" id="XR3-gp-Ftq"/>
+                                    <constraint firstItem="6ZD-yM-C73" firstAttribute="centerY" secondItem="yOR-AF-8Te" secondAttribute="centerY" id="YHq-Qi-B80"/>
                                     <constraint firstItem="soF-oi-qPK" firstAttribute="centerY" secondItem="MG2-Ta-XZz" secondAttribute="centerY" id="YWC-VQ-bgA"/>
                                     <constraint firstItem="dJG-Yj-9JU" firstAttribute="leading" secondItem="H9A-aY-dbo" secondAttribute="trailing" constant="15" id="bUi-c6-vhh"/>
                                     <constraint firstItem="VNT-rn-ZZ5" firstAttribute="centerY" secondItem="ZZY-XN-HU8" secondAttribute="centerY" id="c5k-F7-7Sl"/>
                                     <constraint firstItem="H9A-aY-dbo" firstAttribute="leading" secondItem="OhC-22-FTU" secondAttribute="leading" constant="5" id="cmU-ZL-LMQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="yOR-AF-8Te" secondAttribute="trailing" constant="15" id="cvV-Fb-ecs"/>
                                     <constraint firstItem="ZZY-XN-HU8" firstAttribute="height" secondItem="MG2-Ta-XZz" secondAttribute="height" id="dp2-kg-hbg"/>
                                     <constraint firstItem="WGy-Nc-jOh" firstAttribute="top" secondItem="OhC-22-FTU" secondAttribute="top" constant="30" id="iQJ-31-DdB"/>
                                     <constraint firstItem="H9A-aY-dbo" firstAttribute="top" secondItem="jjR-zg-Xd8" secondAttribute="bottom" constant="30" id="iZn-bR-alO"/>
@@ -312,6 +326,8 @@
                         <outlet property="hourlyPayTF" destination="lRN-zr-vhG" id="N6H-XI-Ltt"/>
                         <outlet property="percentageExampleLBL" destination="VNT-rn-ZZ5" id="7EE-ml-1YI"/>
                         <outlet property="percentageGoalTF" destination="soF-oi-qPK" id="9lf-VS-OeS"/>
+                        <outlet property="resetLBL" destination="6ZD-yM-C73" id="WTB-au-2gc"/>
+                        <outlet property="resetSwitch" destination="yOR-AF-8Te" id="vCD-tL-C7v"/>
                         <segue destination="Wvf-iL-PJH" kind="unwind" identifier="unwindToMain" unwindAction="unwindToVCWithSegue:" id="27I-IX-9IN"/>
                     </connections>
                 </viewController>

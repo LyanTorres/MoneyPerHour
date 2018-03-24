@@ -16,10 +16,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var keys = UserKeys()
     let session = WCSession.default
     var daysWorked: [WorkDay] = []
+    var progressToGoal = 0.0
     
     @IBOutlet weak var goalProgress: UILabel!
     @IBOutlet weak var goalTotal: UILabel!
     @IBOutlet weak var goalName: UILabel!
+    
+    var daysWorkdedRetrieved: [DayWorked] = []
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private var managedContext: NSManagedObjectContext!
+    private var entityDaysDescription: NSEntityDescription!
     
     var tableView: UITableView?
     
@@ -36,6 +42,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             updateUI()
             sendMessageToWatch()
         }
+        
+        
+        managedContext = appDelegate.persistentContainer.viewContext
+        entityDaysDescription = NSEntityDescription.entity(forEntityName: "DayWorked", in: managedContext)
+        
+        loadData()
         
         // adding the gradient effect on the bacgground so that it's consistent
         createGradientLayer()
@@ -62,10 +74,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let result = formatter.string(from: date)
         
         self.daysWorked.append(WorkDay.init(date: result, hoursWorked: (message["moneyMade"] as? Double)!, earnings: (message["hoursWorked"] as? Double)!))
-        print(daysWorked.count)
+        progressToGoal += (message["moneyMade"] as? Double)!
+        UserDefaults.standard.set(progressToGoal, forKey: keys.getGoalProgress())
+        
+        saveData()
         
         DispatchQueue.main.async {
             self.tableView?.reloadData()
+            self.goalProgress.text = String(format: "%.2f",self.progressToGoal)
         }
         
     }
@@ -91,6 +107,58 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             }
         }
+        
+        do {
+            progressToGoal = UserDefaults.standard.double(forKey: keys.getGoalProgress())
+        } catch {
+        
+        }
+    }
+    
+    func saveData() {
+        
+        clearData()
+        
+        for (_, dayy) in daysWorked.enumerated() {
+            let day = DayWorked(context: managedContext)
+            day.date = dayy.date
+            day.hoursWorked = String(format: "%.2f",dayy.hoursWorked)
+            day.moneyEarned = String(format: "%.2f",dayy.earnings)
+        }
+        
+        appDelegate.saveContext()
+    }
+    
+    func clearData() {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DayWorked")
+        if let result = try? managedContext.fetch(fetchRequest) {
+            for object in result {
+                managedContext.delete(object)
+            }
+        }
+        daysWorkdedRetrieved.removeAll()
+    }
+    
+    func loadData() {
+        
+        daysWorked = []
+        daysWorkdedRetrieved = []
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DayWorked")
+        
+        do {
+            daysWorkdedRetrieved = try managedContext.fetch(fetchRequest) as! [DayWorked]
+        } catch {
+            assertionFailure()
+        }
+        
+        if daysWorkdedRetrieved.count != 0 {
+            for (_, day) in daysWorkdedRetrieved.enumerated() {
+                self.daysWorked.append(WorkDay.init(date: day.date!, hoursWorked: Double(day.hoursWorked!)!, earnings: Double(day.moneyEarned!)!))
+            }
+        }
+        
+        updateUI()
     }
     
     
@@ -120,6 +188,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             if indexPath.row < daysWorked.count {
                 daysWorked.remove(at: indexPath.row)
+                saveData()
                 tableView.reloadData()
             }
         }
@@ -143,6 +212,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let userInfo = user {
             goalName.text = "Goal: " + userInfo.getGoalName()
             goalTotal.text = String(userInfo.getGoalTotal())
+            goalProgress.text = String(format: "%.2f", progressToGoal)
+            tableView?.reloadData()
         }
     }
     
@@ -157,6 +228,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? InfoFormViewController {
             destination.user = user
+            destination.userEditing = true
         }
     }
     

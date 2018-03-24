@@ -32,8 +32,13 @@ class ActiveShiftInterfaceController: WKInterfaceController{
         startCounters()
         
         if let currentUser = user {
-            eightHourShiftTotal = currentUser.getHourlyPay() * 1
-            moneyPerSec = ((currentUser.getHourlyPay() / 60) / 60)
+            eightHourShiftTotal = currentUser.getHourlyPay() * 8
+            
+            // OVER HERE
+            
+            // ===============================================================
+            moneyPerSec = ((currentUser.getHourlyPay() / 60) / 60) // * 1000
+            // ===============================================================
             
             if let shift = eightHourShiftTotal {
                 let font = UIFont.systemFont(ofSize: 40.0, weight: UIFont.Weight.medium)
@@ -69,11 +74,11 @@ class ActiveShiftInterfaceController: WKInterfaceController{
     
     @objc func updateUI() {
         
-        if Int(moneyMade) != Int(eightHourShiftTotal) {
+        if Int(moneyMade) < Int(eightHourShiftTotal) {
             moneyMade += moneyPerSec
             timeWorked += 0.01
             
-            if let shift = eightHourShiftTotal{
+            if (eightHourShiftTotal) != nil{
                 let font = UIFont.systemFont(ofSize: 40.0, weight: UIFont.Weight.medium)
                 let attrStr = NSAttributedString(string: "$\(String(format: "%.2f", moneyMade))", attributes: [NSAttributedStringKey.font: font])
                 moneyEarnedLBL.setAttributedText(attrStr)
@@ -85,6 +90,10 @@ class ActiveShiftInterfaceController: WKInterfaceController{
             
             // they have finished their eight hour shift
             let action = WKAlertAction(title: "OK", style: WKAlertActionStyle.default) {
+                
+                let applicationDict = ["moneyMade": self.moneyMade, "hoursWorked": self.timeWorked]
+                self.session.sendMessage(applicationDict, replyHandler: nil, errorHandler: nil)
+                
                 self.dismiss()
             }
             presentAlert(withTitle: "Your shift is done!", message: "We'll log it for you!", preferredStyle: WKAlertControllerStyle.alert, actions:[action])

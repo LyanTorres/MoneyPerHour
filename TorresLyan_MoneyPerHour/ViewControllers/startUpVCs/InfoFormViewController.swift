@@ -15,9 +15,12 @@ class InfoFormViewController: UIViewController {
     @IBOutlet weak var goalTotalTF: UITextField!
     @IBOutlet weak var percentageGoalTF: UITextField!
     @IBOutlet weak var percentageExampleLBL: UILabel!
+    @IBOutlet weak var resetLBL: UILabel!
+    @IBOutlet weak var resetSwitch: UISwitch!
     
     var user: User?
     var keys = UserKeys()
+    var userEditing = false
     
     
     override func viewDidLoad() {
@@ -31,6 +34,11 @@ class InfoFormViewController: UIViewController {
             percentageGoalTF.text = String(currentUser.getGoalPercentage())
             percentageExampleLBL.text = "$\(String(format: "%.2f", currentUser.getGoalPercentage()))"
             
+        }
+        
+        if userEditing{
+            resetLBL.isHidden = false
+            resetSwitch.isHidden = false
         }
         
         createGradientLayer()
@@ -49,6 +57,13 @@ class InfoFormViewController: UIViewController {
             if let hourlyPay = Double(hourlyPayString), let goalTotal = Int(goalTotalString), let goalPercentage = Int(goalPercentageString) {
                 user = User.init(hourlyPay: hourlyPay, goalName: goalName, goalTotal: goalTotal, goalPercentage: goalPercentage)
                 saveUserInfo(user: user!)
+                
+                if userEditing {
+                    if resetSwitch.isOn {
+                        UserDefaults.standard.set(0.0, forKey: keys.getGoalProgress())
+                    }
+                }
+                
                 performSegue(withIdentifier: "unwindToMain", sender: self)
                 
             } else {
