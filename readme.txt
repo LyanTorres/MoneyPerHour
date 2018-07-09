@@ -1,17 +1,27 @@
-Lyan Torres Labiosa
-https://Lyan_Torres@bitbucket.org/Lyan_Torres/portfolio-5.git
+# MONEY PER HOUR (M.P.H.)
 
-Currently, the app is able to do everything listed in the features which are:
+Have you ever sat, or stood, while at your job just staring as time slowly passed by? Do you find it hard to stay motivated while on the job because all you see is how much time is left on the clock before you get to go home and do you?
 
-- Display accurate time, as money equivalent, left in shift.
-- The user is able to add a goal which they can keep track of.
-- They can view previous shifts that they have recorded and also erase them if they'd like to.
+Well, we're here to try and get the kick back in your step by showing you how much money there is left to be made rather than how much more time before you get to go home. 
 
-NICE TO KNOW:
-If you would like to test out how the watch handles meeting the end of an 8 hour shift head over to the ActiveShiftInterfaceController, line 40 and multiple it by at least 1000 to speed up the progress. (It's commented out for you.)
+### Prerequisites
 
-At the moment users are able to start a shift but it caps out at 8 hours, we sadly don't support handling the entering of a shift time length. Although they are able to cancel (nullify) the shift or end it early and their progress could be saved either way.
+If you're trying this on a physical device it would be best if you had an apple watch to go along. There is yet to be a 'none' apple watch version of this application but there wil be one, soon hopefully. 
 
-The user can edit their current profile and choose whether or not they would like to reset their goal, allowing them to change the name without erasing their progress. 
+## Built With
+
+* WatchKit
+* CoreData
+* USerDefaults
+
+## Authors
+
+*Lyan Torres Labiosa
+
+## Acknowledgments
+
+* Ariel Ferrand for giving me the idea while at my old, not so great, retail job.
+* Joseph Sheckles for giving me valuable feedback while developing this application throught out the month Potfolio 5
+
 
 
